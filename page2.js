@@ -22,29 +22,29 @@ modeBtn.addEventListener("click", () => {
 });
 
 
-// Language
+// Language Toggle - نفس منطق Portfolio
 const langBtn = document.querySelector(".lang-btn");
 let currentLang = "ar";
 
 const translations = {
   ar: {
     logo: "مستقبل البيئة", "nav-home": "الرئيسية", "nav-about": "الاستدامة", "nav-problems": "المشكلات", "nav-solutions": "الحلول", "nav-tips": "نصائح", "nav-presentation": "العرض",
-    "hero-h1": "معاً نحو", "hero-name": "مستقبل أخضر", "hero-job": "حماية البيئة للأجيال القادمة", "hero-p": "تعرف على مفهوم الاستدامة.", "hero-btn1": "اكتشف الحلول", "hero-btn2": "نصائح للطلاب",
-    "about-title": "ما هي الاستدامة؟", "about-p1": "الاستدامة تعني استخدام الموارد بطريقة تحافظ على البيئة.", "about-p2": "تشمل تقليل التلوث واستخدام الطاقة المتجددة.",
-    "problems-title": "أهم مشكلات البيئة", "problem1-title": "🌡️ تغير المناخ", "problem1-text": "ارتفاع درجة حرارة الأرض.", "problem2-title": "🥤 تلوث البلاستيك", "problem2-text": "ملايين الأطنان تصل للبحار.", "problem3-title": "🌲 إزالة الغابات", "problem3-text": "قطع الأشجار يقلل المساحات الخضراء.",
-    "solutions-title": "حلول لحماية البيئة", "solution1-title": "♻️ إعادة التدوير", "solution1-text": "إعادة استخدام المواد.", "solution2-title": "☀️ الطاقة المتجددة", "solution2-text": "طاقة نظيفة ومتجددة.", "solution3-title": "💧 توفير المياه", "solution3-text": "إغلاق الصنبور يوفر المياه.",
-    "tips-title": "نصائح للطلاب", "tip1-title": "🎒 استخدم شنطة قماش", "tip1-text": "تجنب أكياس البلاستيك.", "tip2-title": "🚰 وفر المياه", "tip2-text": "أغلق الصنبور.", "tip3-title": "💡 أطفئ الأنوار", "tip3-text": "أطفئ الأجهزة.",
-    "presentation-title": "العرض التوضيحي", "presentation-desc": "اضغط لعرض الشرح.", "presentation-btn": "فتح العرض",
-    footer: "زياد أيمن – جميع الحقوق محفوظة"
+    "hero-h1": "معاً نحو", "hero-name": "مستقبل أخضر", "hero-name2": "حماية البيئة للأجيال القادمة", "hero-p": "تعرف على مفهوم الاستدامة وكيف يمكن للطلاب المساهمة في حماية البيئة.", "hero-btn1": "اكتشف الحلول", "hero-btn2": "نصائح للطلاب",
+    "about-title": "ما هي الاستدامة؟", "about-p1": "الاستدامة تعني استخدام الموارد الطبيعية بطريقة تحافظ على البيئة.", "about-p2": "تشمل تقليل التلوث، استخدام الطاقة المتجددة، والحفاظ على المياه.",
+    "problems-title": "أهم مشكلات البيئة", "problem1-title": "🌡️ تغير المناخ", "problem1-text": "ارتفاع درجة حرارة الأرض بسبب الغازات الملوثة.", "problem2-title": "🥤 تلوث البلاستيك", "problem2-text": "ملايين الأطنان من البلاستيك تصل إلى البحار.", "problem3-title": "🌲 إزالة الغابات", "problem3-text": "قطع الأشجار يقلل المساحات الخضراء.", "problem4-title": "💧 تلوث المياه", "problem4-text": "إلقاء النفايات والمواد الكيميائية في الأنهار والبحار يضر الكائنات البحرية.", "problem5-title": "🗑️ زيادة النفايات", "problem5-text": "الاستهلاك الكبير يؤدي إلى زيادة النفايات مما يسبب تلوث البيئة.", "problem6-title": "🏭 تلوث الهواء", "problem6-text": "الدخان الناتج عن المصانع والسيارات يلوث الهواء ويسبب مشاكل صحية للإنسان.",
+    "solutions-title": "حلول لحماية البيئة", "solution1-title": "♻️ إعادة التدوير", "solution1-text": "إعادة استخدام المواد يقلل النفايات.", "solution2-title": "☀️ الطاقة المتجددة", "solution2-text": "الطاقة الشمسية نظيفة ومتجددة.", "solution3-title": "💧 توفير المياه", "solution3-text": "إغلاق الصنبور يقلل استهلاك المياه.", "solution4-title": "🛍️ تقليل استخدام البلاستيك", "solution4-text": "استخدام أكياس قابلة لإعادة الاستخدام يقلل من تلوث البلاستيك.", "solution5-title": "🚌 استخدام المواصلات العامة", "solution5-text": "المواصلات العامة تقلل من عدد السيارات وبالتالي تقلل التلوث.", "solution6-title": "🌳 زراعة الأشجار", "solution6-text": "الأشجار تساعد في تنقية الهواء وتقليل نسبة ثاني أكسيد الكربون.",
+    "tips-title": "نصائح للطلاب", "tip1-title": "🎒 استخدم شنطة قماش", "tip1-text": "تجنب أكياس البلاستيك.", "tip2-title": "🚰 وفر المياه", "tip2-text": "أغلق الصنبور وأنت تنظف أسنانك.", "tip3-title": "💡 أطفئ الأنوار", "tip3-text": "أطفئ الأجهزة عند مغادرة الغرفة.",
+    "presentation-title": "العرض التوضيحي", "presentation-desc": "اضغط لعرض الشرح التفصيلي.", "presentation-btn": "فتح العرض",
+    footer: "© 2026 زياد أيمن – جميع الحقوق محفوظة"
   },
   en: {
     logo: "Eco Future", "nav-home": "Home", "nav-about": "Sustainability", "nav-problems": "Problems", "nav-solutions": "Solutions", "nav-tips": "Tips", "nav-presentation": "Presentation",
-    "hero-h1": "Together Towards", "hero-name": "A Green Future", "hero-job": "Protecting the Environment", "hero-p": "Learn about sustainability.", "hero-btn1": "Discover Solutions", "hero-btn2": "Student Tips",
-    "about-title": "What is Sustainability?", "about-p1": "Sustainability means using resources wisely.", "about-p2": "Includes reducing pollution and renewable energy.",
-    "problems-title": "Environmental Problems", "problem1-title": "🌡️ Climate Change", "problem1-text": "Rising global temperatures.", "problem2-title": "🥤 Plastic Pollution", "problem2-text": "Millions of tons reach oceans.", "problem3-title": "🌲 Deforestation", "problem3-text": "Tree cutting reduces green spaces.",
-    "solutions-title": "Solutions", "solution1-title": "♻️ Recycling", "solution1-text": "Reuse materials.", "solution2-title": "☀️ Renewable Energy", "solution2-text": "Clean energy sources.", "solution3-title": "💧 Save Water", "solution3-text": "Turn off the tap.",
-    "tips-title": "Tips for Students", "tip1-title": "🎒 Use Cloth Bags", "tip1-text": "Avoid plastic bags.", "tip2-title": "🚰 Save Water", "tip2-text": "Turn off tap.", "tip3-title": "💡 Turn Off Lights", "tip3-text": "Switch off devices.",
-    "presentation-title": "Presentation", "presentation-desc": "Click to view.", "presentation-btn": "Open",
+    "hero-h1": "Together Towards", "hero-name": "A Green Future", "hero-name2": "Protecting the Environment for Future Generations", "hero-p": "Learn about sustainability and how students can help protect the environment.", "hero-btn1": "Discover Solutions", "hero-btn2": "Student Tips",
+    "about-title": "What is Sustainability?", "about-p1": "Sustainability means using natural resources in a way that preserves the environment.", "about-p2": "Includes reducing pollution, using renewable energy, and conserving water.",
+    "problems-title": "Environmental Problems", "problem1-title": "🌡️ Climate Change", "problem1-text": "Rising global temperatures due to polluting gases.", "problem2-title": "🥤 Plastic Pollution", "problem2-text": "Millions of tons of plastic reach the oceans.", "problem3-title": "🌲 Deforestation", "problem3-text": "Tree cutting reduces green spaces.", "problem4-title": "💧 Water Pollution", "problem4-text": "Dumping waste and chemicals harms marine life.", "problem5-title": "🗑️ Waste Increase", "problem5-text": "High consumption leads to increased waste causing pollution.", "problem6-title": "🏭 Air Pollution", "problem6-text": "Factory and car smoke pollutes air and causes health issues.",
+    "solutions-title": "Solutions to Protect the Environment", "solution1-title": "♻️ Recycling", "solution1-text": "Reusing materials reduces waste.", "solution2-title": "☀️ Renewable Energy", "solution2-text": "Solar energy is clean and renewable.", "solution3-title": "💧 Save Water", "solution3-text": "Turning off the tap reduces water consumption.", "solution4-title": "🛍️ Reduce Plastic Use", "solution4-text": "Using reusable bags reduces plastic pollution.", "solution5-title": "🚌 Use Public Transport", "solution5-text": "Public transport reduces cars and therefore pollution.", "solution6-title": "🌳 Plant Trees", "solution6-text": "Trees help purify air and reduce carbon dioxide.",
+    "tips-title": "Tips for Students", "tip1-title": "🎒 Use Cloth Bags", "tip1-text": "Avoid plastic bags.", "tip2-title": "🚰 Save Water", "tip2-text": "Turn off the tap while brushing your teeth.", "tip3-title": "💡 Turn Off Lights", "tip3-text": "Switch off devices when leaving the room.",
+    "presentation-title": "Presentation", "presentation-desc": "Click to view the detailed explanation.", "presentation-btn": "Open Presentation",
     footer: "© 2026 Zeyad Ayman. All rights reserved."
   }
 };
@@ -52,12 +52,20 @@ const translations = {
 langBtn.addEventListener("click", () => {
   currentLang = currentLang === "ar" ? "en" : "ar";
   document.documentElement.lang = currentLang;
-  document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
-  langBtn.textContent = currentLang === "ar" ? "AR" : "EN";
+  document.body.dir = currentLang === "ar" ? "rtl" : "ltr";  // ← التغيير هنا
+  langBtn.textContent = currentLang === "ar" ? "EN" : "AR";
+
   document.querySelectorAll("[data-key]").forEach(el => {
     const key = el.dataset.key;
-    if (translations[currentLang][key]) el.textContent = translations[currentLang][key];
+    if (translations[currentLang][key]) {
+      el.textContent = translations[currentLang][key];
+    }
   });
+  
+  const chatInput = document.getElementById("chatInput");
+  const chatHeader = document.querySelector(".chat-header h3");
+  if (chatInput) chatInput.placeholder = currentLang === "ar" ? "اكتب سؤالك..." : "Type your question...";
+  if (chatHeader) chatHeader.textContent = currentLang === "ar" ? "🌱 AI مساعد" : "🌱 AI Assistant";
 });
 
 
@@ -81,26 +89,6 @@ const chatMessages = document.getElementById("chatMessages");
 chatBtn.addEventListener("click", () => chatModal.classList.toggle("active"));
 closeChat.addEventListener("click", () => chatModal.classList.remove("active"));
 
-// AI Response using Hugging Face (FREE API)
-async function getAIResponse(question) {
-  // لو عندك API Key من OpenAI استخدمه هنا، أو استخدم Hugging Face المجاني:
-  const response = await fetch("https://api-inference.huggingface.co/models/google/flan-t5-base", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      // "Authorization": "Bearer YOUR_HF_TOKEN" // اختياري - شغال من غيره بس أحياناً بيبطئ
-    },
-    body: JSON.stringify({
-      inputs: `Answer this question about environment and sustainability in ${currentLang === 'ar' ? 'Arabic' : 'English'}: ${question}`
-    })
-  });
-  
-  const data = await response.json();
-  return data[0]?.generated_text || (currentLang === 'ar' ? "عذراً، حاول مرة أخرى." : "Sorry, try again.");
-}
-
-
-// أو استخدم ردود ذكية مبنية على الكلمات (بدون API):
 function getSmartResponse(question) {
   const q = question.toLowerCase();
   const arResponses = {
@@ -133,27 +121,34 @@ function getSmartResponse(question) {
     : "Great question! 🌱 The environment needs us all: reduce plastic, save water and energy, plant trees. Any other questions?";
 }
 
-async function sendMessage() {
+function sendMessage() {
   const msg = chatInput.value.trim();
   if (!msg) return;
   
-  // User message
-  chatMessages.innerHTML += `<div class="message user"><p>${msg}</p></div>`;
+  const userDiv = document.createElement("div");
+  userDiv.className = "message user";
+  userDiv.innerHTML = `<p>${msg}</p>`;
+  chatMessages.appendChild(userDiv);
+  
   chatInput.value = "";
   chatMessages.scrollTop = chatMessages.scrollHeight;
   
-  // Loading
-  const loadingId = Date.now();
-  chatMessages.innerHTML += `<div class="message bot" id="load${loadingId}"><p>...</p></div>`;
+  const loadingDiv = document.createElement("div");
+  loadingDiv.className = "message bot";
+  loadingDiv.innerHTML = `<p>${currentLang === 'ar' ? '...جاري التفكير' : 'Thinking...'}</p>`;
+  chatMessages.appendChild(loadingDiv);
   chatMessages.scrollTop = chatMessages.scrollHeight;
   
-  // Get response (استخدم getSmartResponse بدون API أو getAIResponse مع API)
-  const response = getSmartResponse(msg); // سريع ومجاني 100%
-  // const response = await getAIResponse(msg); // يحتاج API
+  const response = getSmartResponse(msg);
   
-  document.getElementById(`load${loadingId}`).remove();
-  chatMessages.innerHTML += `<div class="message bot"><p>${response}</p></div>`;
-  chatMessages.scrollTop = chatMessages.scrollHeight;
+  setTimeout(() => {
+    loadingDiv.remove();
+    const botDiv = document.createElement("div");
+    botDiv.className = "message bot";
+    botDiv.innerHTML = `<p>${response}</p>`;
+    chatMessages.appendChild(botDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 500);
 }
 
 sendBtn.addEventListener("click", sendMessage);
