@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f0fdf4;
+  background-color: #d4dad5;
   color: #111;
   line-height: 1.6;
   font-size: 14px;
@@ -51,17 +51,18 @@ body {
 }
 
 .dark-mode .hero-p {
-  color: #a7f3d0;
+  color: #c4cac7;
 }
 
 .dark-mode .hero-buttons .primary {
   color: #000;
-  background-color: #22c55e;
+  background-color: #1da54f;
 }
 
 .dark-mode .hero-buttons .secondary {
-  color: #bbf7d0;
-  border: 2px solid #22c55e;
+  color: #d4cece;
+  border: 2px solid #26ca62;
+  background-color: #031f09;
 }
 
 .dark-mode .about h2,
@@ -75,34 +76,57 @@ body {
 }
 
 .dark-mode .card {
-  background-color: #052e16;
-  border-color: #166534;
-  color: #d1fae5;
+  background-color: #0c3d2f;
+  border-color: #035221;
+  color: #ffffff;
+}
+.dark-mode .cards h3{
+  color: #d4d3d3;
+}
+.dark-mode .cards p{
+  color: #000000;
+  font-size: 20px;
 }
 
+
 .dark-mode .presentation-section {
-  background-color: #052e16;
+  background-color: #032411;
 }
 
 .dark-mode .presentation-content {
   background-color: #0a1f0a;
 }
 
-.dark-mode .ai-chat-modal {
-  background-color: #052e16;
-}
 
-.dark-mode .chat-header {
-  background-color: #14532d;
-}
-
-.dark-mode .chat-messages {
+.dark-mode .footer {
+  border-top: 1px solid #0a4213;
+  color: #ccc9c9;
   background-color: #0a1f0a;
 }
 
-.dark-mode .footer {
-  border-top: 1px solid #166534;
+
+.dark-mode .ai-chat{
+background:#22c55e;
+color:#022c22;
+box-shadow:0 0 15px rgba(34,197,94,0.6);
 }
+
+.dark-mode .ai-chat:hover{
+background:#16a34a;
+}
+
+.dark-mode .chat-box{
+background:#020617;
+color:#e5e7eb;
+border:1px solid #22c55e;
+}
+
+.dark-mode .chat-input{
+background:#062e03;
+color:white;
+border:1px solid #22c55e;
+}
+
 
 /* Navbar */
 .navbar {
@@ -110,16 +134,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px 50px;
-  background-color: #dcfce7;
+  background-color: #bac4be;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 25px;
   font-weight: bold;
-  color: #166534;
+  color: #13552c;
 }
 
 .nav-links a {
@@ -134,8 +158,9 @@ body {
 
 .nav-links a:hover,
 .nav-links a.active {
-  background-color: #22c55e;
-  color: #fff;
+  background-color: #136d34;
+  color: #fffbfb;
+  font-size: 15px;
 }
 
 .nav-actions button {
@@ -147,13 +172,7 @@ body {
   cursor: pointer;
 }
 
-body[dir="rtl"] .navbar {
-  flex-direction: row-reverse;
-}
 
-body[dir="rtl"] .nav-actions {
-  flex-direction: row-reverse;
-}
 
 /* Sections */
 section {
@@ -185,7 +204,7 @@ section {
   align-items: center;
   justify-content: space-between;
   padding-top: 0;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 
 .hero-text {
@@ -193,13 +212,13 @@ section {
 }
 
 .hero-text h1 {
-  font-size: 24px;
+  font-size: 30px;
   color: #166534;
   margin-bottom: -10px;
 }
 
 .hero-text .name {
-  font-size: 45px;
+  font-size: 50px;
   background: linear-gradient(90deg, #166534, #22c55e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -212,8 +231,8 @@ section {
 }
 
 .hero-p {
-  font-size: 20px;
-  color: #444;
+  font-size: 22px;
+  color: #2c2c2c;
   margin-bottom: 20px;
 }
 
@@ -225,9 +244,9 @@ section {
 
 .btn {
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   transition: 0.2s;
 }
@@ -237,27 +256,30 @@ section {
 }
 
 .primary {
-  background-color: #22c55e;
-  color: #fff;
+  background-color: #13863d;
+  color: #000000;
 }
 
 .secondary {
   border: 2px solid #22c55e;
-  color: #166534;
+  color: #050e08;
+  background-color: #bec7c0;
 }
 
 .hero-image img {
-  width: 350px;
-  height: 370px;
+  width: 380px;
+  height: 400px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 100px;
+  margin-top: 50px;
 }
 
 body[dir="ltr"] .hero-image img {
   margin-right: 0;
   margin-left: 100px;
 }
+
 
 /* About */
 .about {
@@ -266,16 +288,17 @@ body[dir="ltr"] .hero-image img {
 }
 
 .about h2 {
-  font-size: 40px;
+  font-size: 46px;
   margin-bottom: 20px;
   color: #166534;
 }
 
 .about p {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 15px;
-  color: #374151;
+  color: #292f38;
 }
+
 
 /* Cards Section */
 .cards-section h2 {
@@ -287,8 +310,10 @@ body[dir="ltr"] .hero-image img {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
@@ -297,7 +322,10 @@ body[dir="ltr"] .hero-image img {
   border: 3px solid #166534;
   border-radius: 20px;
   text-align: center;
-  transition: 0.3s;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card:hover {
@@ -315,6 +343,7 @@ body[dir="ltr"] .hero-image img {
   font-size: 18px;
   color: #374151;
 }
+
 
 /* Presentation Section */
 .presentation-section {
@@ -361,6 +390,7 @@ body[dir="ltr"] .hero-image img {
   box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
 }
 
+
 /* Footer */
 .footer {
   text-align: center;
@@ -369,6 +399,7 @@ body[dir="ltr"] .hero-image img {
   border-top: 1px solid #bbf7d0;
   color: #374151;
 }
+
 
 /* Back to Top */
 #backToTop {
@@ -399,12 +430,13 @@ body[dir="ltr"] #backToTop {
   left: 25px;
 }
 
+
 /* AI Chat */
 .ai-chat-btn {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: #22c55e;
+  background: #179746;
   color: #fff;
   width: 55px;
   height: 55px;
@@ -477,6 +509,7 @@ body[dir="ltr"] .ai-chat-modal {
 .message {
   margin-bottom: 15px;
   max-width: 85%;
+  color: #000;
 }
 
 .message.bot {
@@ -505,8 +538,8 @@ body[dir="ltr"] .message.user {
 }
 
 .message.user p {
-  background: #166534;
-  color: #fff;
+  background: #116e35;
+  color: #000000;
 }
 
 .chat-input {
@@ -520,7 +553,7 @@ body[dir="ltr"] .message.user {
 .chat-input input {
   flex: 1;
   padding: 12px 15px;
-  border: 2px solid #e5e7eb;
+  border: 2px solid #00a143;
   border-radius: 25px;
   outline: none;
   font-size: 14px;
@@ -530,11 +563,12 @@ body[dir="ltr"] .message.user {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #22c55e;
-  color: #fff;
+  background: #104624;
+  color: #ebe3e3;
   border: none;
   cursor: pointer;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -582,4 +616,11 @@ body[dir="ltr"] .message.user {
     right: 20px;
     left: 20px;
   }
+}
+@media (max-width: 1024px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .cards { grid-template-columns: 1fr; }
 }
