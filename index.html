@@ -31,8 +31,8 @@
   <div class="hero-text">
     <h1 data-key="hero-h1">معاً نحو</h1>
     <h1 class="name" data-key="hero-name">مستقبل أخضر</h1>
-    <h2 data-key="hero-job">حماية البيئة للأجيال القادمة</h2>
-    <p data-key="hero-p">تعرف على مفهوم الاستدامة وكيف يمكن للطلاب المساهمة في حماية البيئة.</p>
+    <h2 data-key="hero-name2">حماية البيئة للأجيال القادمة</h2>
+    <p class="hero-p"  data-key="hero-p">تعرف على مفهوم الاستدامة وكيف يمكن للطلاب المساهمة في حماية البيئة.</p>
     <div class="hero-buttons">
       <a href="#solutions" class="btn primary" data-key="hero-btn1">اكتشف الحلول</a>
       <a href="#tips" class="btn secondary" data-key="hero-btn2">نصائح للطلاب</a>
@@ -53,20 +53,37 @@
 <!-- Problems -->
 <section id="problems" class="cards-section">
   <h2 data-key="problems-title">أهم مشكلات البيئة</h2>
-  <div class="cards">
-    <div class="card">
-      <h3 data-key="problem1-title">🌡️ تغير المناخ</h3>
-      <p data-key="problem1-text">ارتفاع درجة حرارة الأرض بسبب الغازات الملوثة.</p>
-    </div>
-    <div class="card">
-      <h3 data-key="problem2-title">🥤 تلوث البلاستيك</h3>
-      <p data-key="problem2-text">ملايين الأطنان من البلاستيك تصل إلى البحار.</p>
-    </div>
-    <div class="card">
-      <h3 data-key="problem3-title">🌲 إزالة الغابات</h3>
-      <p data-key="problem3-text">قطع الأشجار يقلل المساحات الخضراء.</p>
-    </div>
+<div class="cards">
+  <div class="card">
+    <h3 data-key="problem1-title">🌡️ تغير المناخ</h3>
+    <p data-key="problem1-text">ارتفاع درجة حرارة الأرض بسبب الغازات الملوثة.</p>
   </div>
+  
+  <div class="card">
+    <h3 data-key="problem2-title">🥤 تلوث البلاستيك</h3>
+    <p data-key="problem2-text">ملايين الأطنان من البلاستيك تصل إلى البحار.</p>
+  </div>
+  
+  <div class="card">
+    <h3 data-key="problem3-title">🌲 إزالة الغابات</h3>
+    <p data-key="problem3-text">قطع الأشجار يقلل المساحات الخضراء.</p>
+  </div>
+  
+  <div class="card">
+    <h3 data-key="problem4-title">💧 تلوث المياه</h3>
+    <p data-key="problem4-text">إلقاء النفايات والمواد الكيميائية في الأنهار والبحار يضر الكائنات البحرية.</p>
+  </div>
+  
+  <div class="card">
+    <h3 data-key="problem5-title">🗑️ زيادة النفايات</h3>
+    <p data-key="problem5-text">الاستهلاك الكبير يؤدي إلى زيادة النفايات مما يسبب تلوث البيئة.</p>
+  </div>
+
+  <div class="card">
+    <h3 data-key="problem6-title">🏭 تلوث الهواء</h3>
+    <p data-key="problem6-text">الدخان الناتج عن المصانع والسيارات يلوث الهواء ويسبب مشاكل صحية للإنسان.</p>
+  </div>  
+</div> 
 </section>
 
 <!-- Solutions -->
@@ -77,13 +94,29 @@
       <h3 data-key="solution1-title">♻️ إعادة التدوير</h3>
       <p data-key="solution1-text">إعادة استخدام المواد يقلل النفايات.</p>
     </div>
+    
     <div class="card">
       <h3 data-key="solution2-title">☀️ الطاقة المتجددة</h3>
       <p data-key="solution2-text">الطاقة الشمسية نظيفة ومتجددة.</p>
     </div>
+    
     <div class="card">
       <h3 data-key="solution3-title">💧 توفير المياه</h3>
       <p data-key="solution3-text">إغلاق الصنبور يقلل استهلاك المياه.</p>
+    </div>
+    
+    <div class="card">
+      <h3 data-key="solution4-title">🛍️ تقليل استخدام البلاستيك</h3>
+      <p data-key="solution4-text">استخدام أكياس قابلة لإعادة الاستخدام يقلل من تلوث البلاستيك.</p>
+    </div>
+    
+    <div class="card">
+      <h3 data-key="solution5-title">🚌 استخدام المواصلات العامة</h3>
+      <p data-key="solution5-text">المواصلات العامة تقلل من عدد السيارات وبالتالي تقلل التلوث.</p>
+    </div>
+    <div class="card">
+      <h3 data-key="solution6-title">🌳 زراعة الأشجار</h3>
+      <p data-key="solution6-text">الأشجار تساعد في تنقية الهواء وتقليل نسبة ثاني أكسيد الكربون.</p>
     </div>
   </div>
 </section>
@@ -96,10 +129,12 @@
       <h3 data-key="tip1-title">🎒 استخدم شنطة قماش</h3>
       <p data-key="tip1-text">تجنب أكياس البلاستيك.</p>
     </div>
+
     <div class="card">
       <h3 data-key="tip2-title">🚰 وفر المياه</h3>
       <p data-key="tip2-text">أغلق الصنبور وأنت تنظف أسنانك.</p>
     </div>
+
     <div class="card">
       <h3 data-key="tip3-title">💡 أطفئ الأنوار</h3>
       <p data-key="tip3-text">أطفئ الأجهزة عند مغادرة الغرفة.</p>
@@ -121,7 +156,6 @@
   <p data-key="footer">© 2026 زياد أيمن – جميع الحقوق محفوظة</p>
 </footer>
 
-<button id="backToTop">↑</button>
 
 <!-- AI Chat -->
 <div class="ai-chat-btn" id="aiChatBtn"><i class="fa-solid fa-robot"></i></div>
@@ -138,6 +172,8 @@
     <button id="sendBtn"><i class="fa-solid fa-paper-plane"></i></button>
   </div>
 </div>
+
+<button id="backToTop">↑</button>
 
 <script src="page2.js"></script>
 </body>
