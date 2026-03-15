@@ -76,12 +76,12 @@ body {
 }
 
 .dark-mode .card {
-  background-color: #0c3d2f;
+  background-color: #0f4939;
   border-color: #035221;
   color: #ffffff;
 }
 .dark-mode .cards h3{
-  color: #d4d3d3;
+  color: #e6dada;
 }
 .dark-mode .cards p{
   color: #000000;
@@ -92,9 +92,11 @@ body {
 .dark-mode .presentation-section {
   background-color: #032411;
 }
-
 .dark-mode .presentation-content {
   background-color: #0a1f0a;
+}
+.dark-mode .presentation-desc {
+  color: #cac4c4;
 }
 
 
@@ -283,20 +285,46 @@ body[dir="ltr"] .hero-image img {
 
 /* About */
 .about {
-  max-width: 1000px;
   margin-top: 112px;
 }
-
+.about-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+}
+.about-text {
+  flex: 1;
+  text-align: right;
+}
 .about h2 {
   font-size: 46px;
   margin-bottom: 20px;
   color: #166534;
 }
-
 .about p {
   font-size: 24px;
   margin-bottom: 15px;
   color: #292f38;
+}
+.about-image {
+  align-self: end;
+}
+.about-image img {
+  width: 400px;
+  height: 420px;
+  border-radius: 20%;
+  object-fit: cover;
+  /* margin-top: 240px; */
+}
+body[dir="ltr"] .about-text {
+  text-align: left
+}
+body[dir="ltr"] .about-container {
+  text-align: left
 }
 
 
@@ -369,15 +397,15 @@ body[dir="ltr"] .hero-image img {
 
 .presentation-content p {
   font-size: 18px;
-  color: #374151;
+  color: #13161b;
   margin-bottom: 25px;
 }
 
 .presentation-btn {
   display: inline-block;
   padding: 15px 35px;
-  background: #22c55e;
-  color: #fff;
+  background: #1ba14c;
+  color: #000000;
   text-decoration: none;
   border-radius: 50px;
   font-size: 18px;
@@ -396,8 +424,9 @@ body[dir="ltr"] .hero-image img {
   text-align: center;
   padding: 20px;
   margin-top: -50px;
-  border-top: 1px solid #bbf7d0;
-  color: #374151;
+  border-top: 1px solid #4a524d;
+  color: #000000;
+  background-color: #dfd5d5;
 }
 
 
@@ -603,6 +632,20 @@ body[dir="ltr"] .message.user {
 
   .hero-text .name {
     font-size: 32px;
+  }
+  
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  .about-image {
+    order: 1;
+    align-self: center;
+  }
+  .about-image img {
+    width: 220px;
+    height: 220px;
   }
 
   .about h2,
